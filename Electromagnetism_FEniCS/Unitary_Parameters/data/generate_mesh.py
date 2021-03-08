@@ -6,7 +6,7 @@ import pygmsh
 import meshio
 
 # Define 3D geometry
-lcar = 1
+lcar = 0.1
 geom = pygmsh.built_in.Geometry()
 sphere = geom.add_ball([0, 0, 0], 0.5, lcar=lcar)
 box = geom.add_box(-1, 1, -1, 1, -1, 1, lcar=lcar, holes=[sphere.surface_loop])
